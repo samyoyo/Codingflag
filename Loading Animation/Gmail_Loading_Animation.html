@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gmail Loading Animation</title>
+	<style type="text/css">
+		body {
+		  background: rgb(246,246,246);
+		}
+		.emailaddr {
+		  position: absolute;
+		  top: calc(50% - 27px);
+		  left: 50%;
+		  transform: translateX(-50%);
+		  color: rgb(17,17,17);
+		  font-family: arial,sans-serif;
+		  font-weight: 600;
+		}
+		.loader-gmail {
+		  position: absolute;
+		  top: calc(50% - 6px);
+		  left: calc(50% - 160px);
+		}
+		.loader-gmail {
+		  width: 320px;
+		  height: 8px;
+		  padding: 1px;
+		  background-image: linear-gradient(135deg, rgb(97, 135, 242) 0%, rgb(97, 135, 242) 25%, rgb(86, 121, 218) 25%, rgb(86, 121, 218) 50%, rgb(97, 135, 242) 50%, rgb(97, 135, 242) 75%, rgb(86, 121, 218) 75%, rgb(86, 121, 218) 100%);
+		  background-repeat: repeat;
+		  background-position: 0px 0px;
+		  background-size: 16px 16px;
+		  background-clip: content-box;
+		  border: 1px solid #a4a4a4;
+		  -moz-animation: loading 1s linear infinite;
+		  -webkit-animation: loading 1s linear infinite;
+		  animation: loading 1s linear infinite;
+		}
+
+		.loader-gmail:after {
+		  content: '';
+		  position: absolute;
+		  right: 0;
+		  height: 8px;
+		  background: rgb(247,247,247);
+		  z-index: 20;
+		  -moz-animation: progress 5s ease-in-out infinite;
+		  -webkit-animation: progress 5s ease-in-out infinite;
+		  animation: progress 5s ease-in-out infinite;
+		}
+
+		/* Keyframes */
+		@-webkit-keyframes loading {
+		  from {background-position: 0px 0px;}
+		  to {background-position: -16px 0px;}
+		}
+		@keyframes loading {
+		  from {background-position: 0px 0px;}
+		  to {background-position: -16px 0px;}
+		}
+		@-webkit-keyframes progress {
+		  0% {min-width: 100%;}
+		  30% {min-width: 83%;}
+		  50% {min-width: 65%;}
+		  69% {min-width: 17%;}
+		  85% {min-width: 0;}
+		  100% {min-width: 0;}
+		}
+		@keyframes progress {
+		  0% {min-width: 100%;}
+		  30% {min-width: 83%;}
+		  50% {min-width: 65%;}
+		  69% {min-width: 17%;}
+		  85% {min-width: 0;}
+		  100% {min-width: 0;}
+		}
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<span class="emailaddr">Loading dsr3217@gmail.com...</span>
+		<div class="loader-gmail"></div>	
+	</div>
+</body>
+</html>

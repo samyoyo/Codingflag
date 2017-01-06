@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.loader {
+			position:absolute;
+			top:40%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			width:55px;
+			height:55px;
+			margin-left: -20px;
+			border-radius:50%;
+			border-width:15px;
+			border-style:solid;
+			border-color:rgba(234, 228, 228, 0.8);
+			border-top-color:rgba(92, 174, 236, 1);
+			-moz-animation:spin 1s infinite linear;
+			-webkit-animation:spin 1s infinite linear;
+			animation:spin 1s infinite linear;
+		}
+		@-webkit-keyframes spin {
+			from {-webkit-transform:rotate(0deg);}
+			to {-webkit-transform:rotate(360deg);}
+		}
+		@keyframes spin {
+			from {transform:rotate(0deg);}
+			to {transform:rotate(360deg);}
+		}
+	</style>
+</head>
+<body>
+	<div class="loader"></div>
+</body>
+</html>

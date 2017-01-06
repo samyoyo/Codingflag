@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body{
+			background: rgb(32,32,32);
+		}
+		.loading {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform:translate(-50%,-50%);
+			margin-left: 20px;
+		}
+		.loading span {
+			position: relative;
+			font-family: helvetica,sans-serif;
+			font-size: 60px;
+			color: #f80;
+		}
+		.loading span:nth-child(1) {
+			padding-right: 70px;
+		}
+		.loading span:nth-child(2){
+			position: absolute;
+			margin-top: 5px;
+			-moz-animation: shift 1.2s infinite ease-in-out;
+			-webkit-animation: shift 1.2s infinite ease-in-out;
+			animation: shift 1.2s infinite ease-in-out;
+		}
+		.loading span:nth-child(3) {
+			padding-left: 90px;
+		}
+
+		@-webkit-keyframes shift {
+			0%{left:18px;}
+			50%{left:140px;}
+			100%{left:18px;}
+		}
+		@keyframes shift {
+			0%{left:18px;}
+			50%{left:140px;}
+			100%{left:18px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<span>[</span>
+		<span>=</span>
+		<span>]</span>
+	</div>
+</body>
+</html>
